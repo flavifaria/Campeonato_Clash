@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campeonato Clash of Clans - Duque</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .match-card {
+        transition: all 0.3s ease;
+      }
+
+      .match-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .player-slot {
+        transition: all 0.2s ease;
+      }
+
+      .player-slot:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+      }
+
+      .winner {
+        font-weight: bold;
+      }
+
+      .stage-column {
+        min-width: 280px;
+      }
+
+      @media (max-width: 768px) {
+        .stage-column {
+          min-width: 100%;
+        }
+      }
+    </style>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full">
+    <div
+      id="app"
+      class="w-full h-full overflow-auto"
+      style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)"
+    >
+      <header
+        class="text-center py-8 px-4"
+        style="
+          background: linear-gradient(
+            180deg,
+            rgba(255, 140, 0, 0.2) 0%,
+            transparent 100%
+          );
+        "
+      >
+        <h1
+          id="tournament-title"
+          class="text-4xl md:text-5xl font-bold mb-2"
+          style="color: #ffa500; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)"
+        >
+          🏆 Campeonato Clash of Clans
+        </h1>
+        <p
+          id="tournament-subtitle"
+          class="text-lg md:text-xl"
+          style="color: #e0e0e0"
+        >
+          Chaves Eliminatórias - 26 Participantes
+        </p>
+      </header>
+      <main class="container-wrapper mx-auto px-4 py-8 max-w-full">
+        <div
+          class="flex overflow-x-auto gap-6 pb-4"
+          style="scroll-snap-type: x proximity"
+        >
+          <!-- OITAVAS DE FINAL -->
+          <div class="stage-column flex-shrink-0">
+            <h2
+              class="text-2xl font-bold text-center mb-6 sticky top-0 py-3 z-10"
+              style="
+                color: #ffa500;
+                background: linear-gradient(
+                  180deg,
+                  #16213e 0%,
+                  transparent 100%
+                );
+              "
+            >
+              Oitavas de Final
+            </h2>
+            <div class="space-y-4">
+              <!-- Jogo 1 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 1</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>⚔️</span>
+                      <span class="truncate">Daniel da Silva Carvalho</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🛡️</span>
+                      <span class="truncate">Ryan Carlos Melquiades</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 2 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 2</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>⚡</span>
+                      <span class="truncate">Guilherme Viana da Silva</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🌊</span>
+                      <span class="truncate">Maria Eduarda Franklin</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 3 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 3</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🌟</span>
+                      <span class="truncate">Arthur dos Santos Botelho</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🔥</span>
+                      <span class="truncate">Guilherme Gonçalo</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 4 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 4</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>👑</span>
+                      <span class="truncate">Felipe Maximiano Gentile</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>💎</span>
+                      <span class="truncate">Enzo Daniel Ferreira</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 5 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 5</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🗡️</span>
+                      <span class="truncate">Guilherme Rodrigues</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🏹</span>
+                      <span class="truncate">Alecsandro Genovez</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 6 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 6</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🔱</span>
+                      <span class="truncate">Samuel da Silva Carvalho</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>⭐</span> <span class="truncate">Marques</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 7 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 7</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>💫</span>
+                      <span class="truncate">Murilo Henrique Ferreira</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🌪️</span>
+                      <span class="truncate">Gustavo Guzzi</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 8 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 8</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎯</span>
+                      <span class="truncate">Emanuel Imbuzeiro</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎪</span>
+                      <span class="truncate">Gabriel Antonio</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 9 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 9</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎨</span>
+                      <span class="truncate">Filipe Franco</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎭</span>
+                      <span class="truncate">Nicolas Gouveia da Silva</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 10 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 10</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🏆</span>
+                      <span class="truncate">Valmir Ramos Canuto</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🌺</span>
+                      <span class="truncate">Rebeca Muller</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 11 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 11</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎲</span> <span class="truncate">Brayan</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎖️</span>
+                      <span class="truncate">Daniel Fernandes Santos</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 12 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 12</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎪</span>
+                      <span class="truncate">Pedro Henrique Barbosa</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🌠</span> <span class="truncate">Hugo Felipe</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Jogo 13 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >JOGO 13</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🌀</span>
+                      <span class="truncate">Gabriel Vinicius Xavier</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎯</span> <span class="truncate">Wilian</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- QUARTAS DE FINAL -->
+          <div class="stage-column flex-shrink-0">
+            <h2
+              class="text-2xl font-bold text-center mb-6 sticky top-0 py-3 z-10"
+              style="
+                color: #ffa500;
+                background: linear-gradient(
+                  180deg,
+                  #16213e 0%,
+                  transparent 100%
+                );
+              "
+            >
+              Quartas de Final
+            </h2>
+            <div class="space-y-4">
+              <!-- Quartas 1 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 1</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 1</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 2</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Quartas 2 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 2</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 3</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 4</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Quartas 3 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-8"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 3</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 5</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 6</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Quartas 4 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 4</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>João</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div__
+                  JOGO 12
+                  🎪
+                  Pedro Henrique Barbosa
+                  __
+                  🌠
+                  Hugo Felipe
+                  __
+                  JOGO 13
+                  🌀
+                  Gabriel Vinicius Xavier
+                  __
+                  🎯
+                  Wilian
+                  __
+                  Quartas de Final
+                  QUARTAS 1
+                  ❓
+                  Vencedor Jogo 1
+                  __
+                  ❓
+                  Vencedor Jogo 2
+                  __
+                  QUARTAS 2
+                  ❓
+                  Vencedor Jogo 3
+                  __
+                  ❓
+                  Vencedor Jogo 4
+                  __
+                  QUARTAS 3
+                  ❓
+                  Vencedor Jogo 5
+                  __
+                  ❓
+                  Vencedor Jogo 6
+                  __
+                  QUARTAS 4
+                  ❓
+                  Vencedor Jogo 7
+                  __
+                  ❓
+                  Vencedor Jogo 8
+                  __
+                  QUARTAS 5
+                  ❓
+                  Vencedor Jogo 9
+                  __
+                  ❓
+                  Vencedor Jogo 10
+                  __
+                  QUARTAS 6
+                  ❓
+                  Vencedor Jogo 11
+                  __
+                  ❓
+                  Vencedor Jogo 12
+                  __
+                  QUARTAS 7
+                  ❓
+                  Vencedor Jogo 13
+                  __
+                  🎁
+                  BYE (Passa direto)
+                  __
+                  Semifinais
+                  SEMIFINAL 1
+                  ❓
+                  Vencedor Quartas 1
+                  __
+                  ❓
+                  Vencedor Quartas 2
+                  __
+                  SEMIFINAL 2
+                  ❓
+                  Vencedor Quartas 3
+                  __
+                  ❓
+                  Vencedor Quartas 4
+                  __
+                  SEMIFINAL 3
+                  ❓
+                  Vencedor Quartas 5
+                  __
+                  ❓
+                  Vencedor Quartas 6
+                  __
+                  SEMIFINAL 4
+                  ❓
+                  Vencedor Quartas 7
+                  __
+                  
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 8</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Quartas 5 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-8"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 5</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 9</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 10</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Quartas 6 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 6</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 11</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 12</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Quartas 7 (Bye) -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-8"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >QUARTAS 7</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Jogo 13</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎁</span>
+                      <span class="italic">BYE (Passa direto)</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SEMIFINAIS -->
+          <div class="stage-column flex-shrink-0">
+            <h2
+              class="text-2xl font-bold text-center mb-6 sticky top-0 py-3 z-10"
+              style="
+                color: #ffa500;
+                background: linear-gradient(
+                  180deg,
+                  #16213e 0%,
+                  transparent 100%
+                );
+              "
+            >
+              Semifinais
+            </h2>
+            <div class="space-y-4">
+              <!-- Semi 1 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-24"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >SEMIFINAL 1</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 1</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 2</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Semi 2 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-48"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >SEMIFINAL 2</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 3</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 4</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Semi 3 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-48"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >SEMIFINAL 3</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 5</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 6</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Semi 4 -->
+              <div
+                class="match-card p-4 rounded-lg shadow-lg mt-48"
+                style="
+                  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                  border: 2px solid #ffa500;
+                "
+              >
+                <div class="text-center mb-3">
+                  <span
+                    class="text-xs font-semibold px-3 py-1 rounded"
+                    style="background: #ffa500; color: #1a1a2e"
+                    >SEMIFINAL 4</span
+                  >
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.1)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>❓</span> <span>Vencedor Quartas 7</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-3 rounded"
+                    style="background: rgba(255, 255, 255, 0.05)"
+                  >
+                    <span
+                      class="flex items-center gap-2 text-sm"
+                      style="color: #e0e0e0"
+                    >
+                      <span>🎁</span>
+                      <span class="italic">BYE (Passa direto)</span>
+                    </span>
+                    <span class="ml-2" style="color: #9ca3af">__</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FINAL -->
+          <div class="stage-column flex-shrink-0">
+            <h2
+              class="text-2xl font-bold text-center mb-6 sticky top-0 py-3 z-10"
+              style="
+                color: #ffd700;
+                background: linear-gradient(
+                  180deg,
+                  #16213e 0%,
+                  transparent 100%
+                );
+              "
+            >
+              🏆 Final
+            </h2>
+            <div class="space-y-4">
+              <!-- Final 1 -->
+              <div
+                class="match-card p-6 rounded-lg shadow-2xl mt-64"
+                style="
+                  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+                  border: 3px solid #ffd700;
+                "
+              >
+                <div class="text-center mb-4">
+                  <span
+                    class="text-sm font-bold px-4 py-2 rounded"
+                    style="background: #ffd700; color: #1a1a2e"
+                    >🏆 GRANDE FINAL 🏆</span
+                  >
+                </div>
+                <div class="space-y-3">
+                  <div
+                    class="player-slot flex items-center justify-between p-4 rounded"
+                    style="background: rgba(255, 255, 255, 0.2)"
+                  >
+                    <span
+                      class="flex items-center gap-2 font-bold text-sm"
+                      style="color: #1a1a2e"
+                    >
+                      <span class="text-2xl">❓</span>
+                      <span>Vencedor Semi 1</span>
+                    </span>
+                    <span class="text-lg" style="color: #1a1a2e">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-4 rounded"
+                    style="background: rgba(255, 255, 255, 0.2)"
+                  >
+                    <span
+                      class="flex items-center gap-2 font-bold text-sm"
+                      style="color: #1a1a2e"
+                    >
+                      <span class="text-2xl">❓</span>
+                      <span>Vencedor Semi 2</span>
+                    </span>
+                    <span class="text-lg" style="color: #1a1a2e">__</span>
+                  </div>
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-sm font-bold" style="color: #1a1a2e">
+                    ⭐ Melhor de 5 ⭐
+                  </p>
+                </div>
+              </div>
+              <!-- Final 2 -->
+              <div
+                class="match-card p-6 rounded-lg shadow-2xl mt-48"
+                style="
+                  background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+                  border: 3px solid #ffd700;
+                "
+              >
+                <div class="text-center mb-4">
+                  <span
+                    class="text-sm font-bold px-4 py-2 rounded"
+                    style="background: #ffd700; color: #1a1a2e"
+                    >🏆 GRANDE FINAL 🏆</span
+                  >
+                </div>
+                <div class="space-y-3">
+                  <div
+                    class="player-slot flex items-center justify-between p-4 rounded"
+                    style="background: rgba(255, 255, 255, 0.2)"
+                  >
+                    <span
+                      class="flex items-center gap-2 font-bold text-sm"
+                      style="color: #1a1a2e"
+                    >
+                      <span class="text-2xl">❓</span>
+                      <span>Vencedor Semi 3</span>
+                    </span>
+                    <span class="text-lg" style="color: #1a1a2e">__</span>
+                  </div>
+                  <div
+                    class="player-slot flex items-center justify-between p-4 rounded"
+                    style="background: rgba(255, 255, 255, 0.2)"
+                  >
+                    <span
+                      class="flex items-center gap-2 font-bold text-sm"
+                      style="color: #1a1a2e"
+                    >
+                      <span class="text-2xl">❓</span>
+                      <span>Vencedor Semi 4</span>
+                    </span>
+                    <span class="text-lg" style="color: #1a1a2e">__</span>
+                  </div>
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-sm font-bold" style="color: #1a1a2e">
+                    ⭐ Melhor de 5 ⭐
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 p-6 rounded-lg text-center"
+          style="background: rgba(255, 165, 0, 0.1); border: 2px solid #ffa500"
+        >
+          <h3 class="text-xl font-bold mb-3" style="color: #ffa500">
+            📊 Informações do Campeonato
+          </h3>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"
+            style="color: #e0e0e0"
+          >
+            <div>
+              <p class="font-semibold" style="color: #ffa500">Formato</p>
+              <p>Eliminação Simples</p>
+            </div>
+            <div>
+              <p class="font-semibold" style="color: #ffa500">Sistema</p>
+              <p>Melhor de 3 (Final: Melhor de 5)</p>
+            </div>
+            <div>
+              <p class="font-semibold" style="color: #ffa500">Participantes</p>
+              <p>26 Jogadores</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="text-center py-6 px-4 mt-8"
+        style="background: rgba(0, 0, 0, 0.3); border-top: 2px solid #ffa500"
+      >
+        <p
+          id="footer-text"
+          class="text-lg font-semibold"
+          style="color: #ffa500"
+        >
+          ⚔️ Boa sorte a todos os participantes! ⚔️
+        </p>
+      </footer>
+    </div>
+    <script>
+      const defaultConfig = {
+        tournament_title: "🏆 Campeonato Clash of Clans",
+        tournament_subtitle: "Chaves Eliminatórias - 26 Participantes",
+        footer_text: "⚔️ Boa sorte a todos os participantes! ⚔️",
+        background_color: "#1a1a2e",
+        primary_color: "#ffa500",
+        text_color: "#e0e0e0",
+        card_color: "#2c3e50",
+        accent_color: "#ffd700",
+      };
+
+      async function onConfigChange(config) {
+        const titleElement = document.getElementById("tournament-title");
+        const subtitleElement = document.getElementById("tournament-subtitle");
+        const footerElement = document.getElementById("footer-text");
+
+        if (titleElement) {
+          titleElement.textContent =
+            config.tournament_title || defaultConfig.tournament_title;
+          titleElement.style.color =
+            config.primary_color || defaultConfig.primary_color;
+        }
+
+        if (subtitleElement) {
+          subtitleElement.textContent =
+            config.tournament_subtitle || defaultConfig.tournament_subtitle;
+          subtitleElement.style.color =
+            config.text_color || defaultConfig.text_color;
+        }
+
+        if (footerElement) {
+          footerElement.textContent =
+            config.footer_text || defaultConfig.footer_text;
+          footerElement.style.color =
+            config.primary_color || defaultConfig.primary_color;
+        }
+
+        const backgroundColor =
+          config.background_color || defaultConfig.background_color;
+        const app = document.getElementById("app");
+        if (app) {
+          app.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, #16213e 100%)`;
+        }
+
+        const allH2 = document.querySelectorAll("h2");
+        allH2.forEach((h2) => {
+          if (!h2.textContent.includes("Final")) {
+            h2.style.color =
+              config.primary_color || defaultConfig.primary_color;
+          } else {
+            h2.style.color = config.accent_color || defaultConfig.accent_color;
+          }
+        });
+
+        const matchCards = document.querySelectorAll(".match-card");
+        const primaryColor =
+          config.primary_color || defaultConfig.primary_color;
+        const cardColor = config.card_color || defaultConfig.card_color;
+        matchCards.forEach((card) => {
+          card.style.background = `linear-gradient(135deg, ${cardColor} 0%, #34495e 100%)`;
+          card.style.borderColor = primaryColor;
+        });
+      }
+
+      function mapToCapabilities(config) {
+        return {
+          recolorables: [
+            {
+              get: () =>
+                config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              },
+            },
+            {
+              get: () => config.card_color || defaultConfig.card_color,
+              set: (value) => {
+                config.card_color = value;
+                window.elementSdk.setConfig({ card_color: value });
+              },
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              },
+            },
+            {
+              get: () => config.primary_color || defaultConfig.primary_color,
+              set: (value) => {
+                config.primary_color = value;
+                window.elementSdk.setConfig({ primary_color: value });
+              },
+            },
+            {
+              get: () => config.accent_color || defaultConfig.accent_color,
+              set: (value) => {
+                config.accent_color = value;
+                window.elementSdk.setConfig({ accent_color: value });
+              },
+            },
+          ],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined,
+        };
+      }
+
+      function mapToEditPanelValues(config) {
+        return new Map([
+          [
+            "tournament_title",
+            config.tournament_title || defaultConfig.tournament_title,
+          ],
+          [
+            "tournament_subtitle",
+            config.tournament_subtitle || defaultConfig.tournament_subtitle,
+          ],
+          ["footer_text", config.footer_text || defaultConfig.footer_text],
+        ]);
+      }
+
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities,
+          mapToEditPanelValues,
+        });
+      }
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9acceb07812cf200',t:'MTc2NTUzOTMyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
